@@ -29,13 +29,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm6-pf-ZC6">
-                                <rect key="frame" x="254" y="331" width="93" height="30"/>
-                                <state key="normal" title="Show Answer"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG7-hM-8XH">
                                 <rect key="frame" x="252" y="66" width="98" height="30"/>
                                 <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jl7-HT-Kpm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm6-pf-ZC6">
+                                <rect key="frame" x="254" y="331" width="93" height="30"/>
+                                <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EJn-7R-9Z8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -50,6 +56,10 @@
                             <constraint firstItem="etd-TF-QiC" firstAttribute="centerX" secondItem="VG7-hM-8XH" secondAttribute="centerX" id="xXg-eo-MYu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="etd-TF-QiC" id="KkL-TQ-wOD"/>
+                        <outlet property="questionLabel" destination="XwT-fy-VDc" id="47T-vd-2PT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
