@@ -284,6 +284,7 @@
 				3F3F5F351C494E510072ABEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
